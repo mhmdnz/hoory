@@ -30,17 +30,14 @@ class OAuth2ExternalService implements OAuth2ExternalInterface
     {
         $googleUser = Socialite::driver($provider)->stateless()->user();
         $user = $this->userRepository->findByEmail($googleUser->getEmail());
-        if ($user) {
-            Auth::login($user);
-            
-            return redirect('/dashboard');
+        if (!$user) {
+            $user = $this->userRepository->save(
+                $googleUser->getName(),
+                $googleUser->getEmail(),
+                self::OAUTH_DEFAULT_PASSWORD,
+                Carbon::now()
+            );
         }
-        $user = $this->userRepository->save(
-            $googleUser->getName(),
-            $googleUser->getEmail(),
-            self::OAUTH_DEFAULT_PASSWORD,
-            Carbon::now()
-        );
         Auth::login($user);
 
         return redirect('/dashboard');
