@@ -53,6 +53,10 @@
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register.google') }}">
                     {{ __('Register With Google') }}
                 </a>
+                <hr style="margin-right: 10px;">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register.facebook') }}">
+                    {{ __('Register With Facebook') }}
+                </a>
 
                 <x-button class="ml-4">
                     {{ __('Register') }}

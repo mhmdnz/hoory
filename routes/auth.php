@@ -69,3 +69,10 @@ Route::get('/google/auth/redirect',
 
 Route::get('/google/auth/callback',
     [\App\Http\Controllers\Auth\GoogleAuthController::class, 'callBack']);
+
+Route::get('/facebook/auth/redirect',
+    [\App\Http\Controllers\Auth\FacebookAuthController::class, 'redirect'])
+    ->name('register.facebook');
+
+Route::get('/facebook/auth/callback',
+    [\App\Http\Controllers\Auth\FacebookAuthController::class, 'callBack']);

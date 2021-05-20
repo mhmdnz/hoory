@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3d95bc-1276-4ea6-8c99-5b562aa95db0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hoory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hoory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/access_log/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/access_log/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.php" afterDir="false" />
     </list>
@@ -177,7 +171,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1621528835989</updated>
-      <workItem from="1621528838079" duration="6685000" />
+      <workItem from="1621528838079" duration="8253000" />
     </task>
     <servers />
   </component>
@@ -185,9 +179,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="303" y="171" width="674" height="486" key="find.popup" timestamp="1621538614397">
+    <state x="378" y="159" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1621541031265">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="303" y="171" width="674" height="486" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1621538614397" />
+    <state x="378" y="159" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1621541031265" />
+    <state x="303" y="171" width="674" height="486" key="find.popup" timestamp="1621541362996">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="303" y="171" width="674" height="486" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1621541362996" />
   </component>
 </project>
