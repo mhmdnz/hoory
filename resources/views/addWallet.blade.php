@@ -32,8 +32,10 @@
                         </div>
                         <div>
                             <x-label for="type" :value="__('Type')" />
-
-                            <x-input style="text-align: center;height: 35px;" id="type" class="block mt-1 w-full" name="type" :value="old('type')" required autofocus />
+                            <select style="text-align: center;height: 35px;width: 100%;margin-top: 5px;" name="type" id="type">
+                                <option value="debit">Debit</option>
+                                <option value="credit">Credit</option>
+                            </select>
                         </div>
                         <x-button style="margin-top: 5px;" class="ml-3">
                             {{ __('Save') }}
