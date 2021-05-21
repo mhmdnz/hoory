@@ -4,11 +4,11 @@ The Application is wrriten on Laravel, if you are not familier with the environm
 
 [Laravel Installation](https://laravel.com/docs/8.x/installation)
 
-# Installation Guid
-
-## For The Interviewer
+# For The Interviewer
 
 - [For The Interviewer](#Instalation-and-test)
+
+# Installation Guid
 
 ## Manualy
   - [Clone project from Git repository](https://github.com/mhmdnz/hoory.git)
@@ -103,6 +103,13 @@ $ docker-compose up --build -d
 $ docker exec -it php sh /tmp/Prepration.sh
 ```
 > Check the result : localhost:8080
+<br>
+> I seed user table with a test user (just run the docker "exec -it php sh /tmp/Prepration.sh" command) for the quick test So you could login to system
+> With following email and password :
+```
+Email : test@test.com
+Password : password
+```
 ## Some helpful commands
 
 ```sh
