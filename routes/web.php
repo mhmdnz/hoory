@@ -12,13 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['verified', 'check.wallet', 'auth'])->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/wallet', function () {
+        return view('wallet');
+    })->name('wallet.show');
+
+    Route::get('/wallet/new', [App\Http\Controllers\WalletController::class, 'show'])
+        ->name('wallet.add.show');
+
+    Route::post('/wallet/new', [\App\Http\Controllers\WalletController::class, 'create'])
+        ->name('wallet.add.create');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth','verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';

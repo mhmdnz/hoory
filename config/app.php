@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         \App\Providers\EloquentUserRepositoryProvider::class,
         \App\Providers\OAuth2ExternalServiceProvider::class,
+        \App\Providers\EloquentWalletRepositoryProvider::class,
 
         /*
          * Package Service Providers...

@@ -34,10 +34,11 @@ class OAuth2ExternalService implements OAuth2ExternalInterface
             $user = $this->userRepository->save(
                 $googleUser->getName(),
                 $googleUser->getEmail(),
-                self::OAUTH_DEFAULT_PASSWORD,
+                md5(self::OAUTH_DEFAULT_PASSWORD),
                 Carbon::now()
             );
         }
+
         Auth::login($user);
 
         return redirect('/dashboard');
