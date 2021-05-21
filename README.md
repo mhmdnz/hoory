@@ -103,7 +103,7 @@ $ docker-compose up --build -d
 $ docker exec -it php sh /tmp/Prepration.sh
 ```
 > Check the result : localhost:8080
-<br>
+
 > I seed user table with a test user (just run the docker "exec -it php sh /tmp/Prepration.sh" command) for the quick test So you could login to system
 > With following email and password :
 ```
