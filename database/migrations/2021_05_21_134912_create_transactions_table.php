@@ -17,9 +17,11 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('wallet_id')->constrained();
+            $table->string('wallet_name');
             $table->decimal('amount');
             $table->decimal('wallet_old_balance');
             $table->decimal('wallet_new_balance');
+            $table->decimal('user_current_balance');
             $table->enum('wallet_type', ['debit', 'credit']);
             $table->timestamps();
         });

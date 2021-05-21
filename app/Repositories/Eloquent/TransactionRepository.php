@@ -32,6 +32,8 @@ class TransactionRepository implements TransactionRepositoryInterface
         $transaction->wallet_old_balance = $wallet->balance;
         $transaction->wallet_new_balance = $newBalance;
         $transaction->wallet_type = $wallet->type;
+        $transaction->wallet_name = $wallet->name;
+        $transaction->user_current_balance = Auth::user()->wallets()->sum('balance') + $amount;
         $transaction->wallet()->associate($wallet);
         $user->transactions()->save($transaction);
         $this->walletRepository->updateBalance($wallet->id, $newBalance);

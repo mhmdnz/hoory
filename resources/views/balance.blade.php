@@ -53,12 +53,13 @@
                         <th>Wallet New Balance</th>
                         <th>Created At</th>
                     </tr>
-                    @foreach($wallet->transactions as $transaction)
+                    @foreach($wallet->transactions->reverse() as $transaction)
                         <tr>
                             <td>{{$transaction->amount}}</td>
                             <td>{{$transaction->wallet_old_balance}}</td>
                             <td>{{$transaction->wallet_new_balance}}</td>
-                            <td>{{$transaction->created_at}}</td></tr>
+                            <td>{{$transaction->created_at}}</td>
+                        </tr>
                     @endforeach
                 </table>
             </div>
