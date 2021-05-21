@@ -21,4 +21,11 @@ class WalletRepository implements WalletRepositoryInterface
 
         return $wallet;
     }
+
+    public function updateBalance($walletId, $newBalance)
+    {
+        $wallet = Wallet::find($walletId);
+        $wallet->balance = $newBalance;
+        $wallet->update();
+    }
 }

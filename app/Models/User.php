@@ -16,6 +16,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Wallet::class);
     }
 
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *

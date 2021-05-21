@@ -4,17 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\WalletRequest;
 use App\Models\Wallet;
+use App\Services\Interfaces\WalletHandlerServiceInterface;
 use App\Services\WalletHandlerService;
 use Illuminate\Http\Request;
 
 class WalletController extends Controller
 {
     /**
-     * @var WalletHandlerService
+     * @var WalletHandlerServiceInterface
      */
     private $walletHandlerService;
 
-    public function __construct(WalletHandlerService $walletHandlerService)
+    public function __construct(WalletHandlerServiceInterface $walletHandlerService)
     {
         $this->walletHandlerService = $walletHandlerService;
     }
@@ -29,5 +30,10 @@ class WalletController extends Controller
         $this->walletHandlerService->create($walletRequest);
 
         return redirect('/wallet');
+    }
+
+    public function balance(Wallet $wallet)
+    {
+        return view('balance', ['wallet' => $wallet]);
     }
 }

@@ -6,9 +6,10 @@ namespace App\Services;
 
 use App\Http\Requests\WalletRequest;
 use App\Repositories\Interfaces\WalletRepositoryInterface;
+use App\Services\Interfaces\WalletHandlerServiceInterface;
 use Illuminate\Support\Facades\Auth;
 
-class WalletHandlerService
+class WalletHandlerService implements WalletHandlerServiceInterface
 {
     /**
      * @var WalletRepositoryInterface

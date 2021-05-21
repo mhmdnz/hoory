@@ -62,6 +62,7 @@
                         <th>Number</th>
                         <th>Type</th>
                         <th>Balance</th>
+                        <th>Action</th>
                     </tr>
                         @foreach(\Illuminate\Support\Facades\Auth::user()->wallets as $wallet)
                             <tr>
@@ -69,6 +70,7 @@
                                 <td>{{$wallet->number}}</td>
                                 <td>{{$wallet->type}}</td>
                                 <td>{{$wallet->balance}}</td>
+                                <td><a style="color: #008CBA" href="{{ route('wallet.balance',['wallet' => $wallet]) }}">Change Balance</a></td>
                             </tr>
                         @endforeach
                 </table>

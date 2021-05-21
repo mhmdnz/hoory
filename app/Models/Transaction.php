@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Wallet extends Model
+class Transaction extends Model
 {
     use HasFactory;
 
@@ -14,8 +14,8 @@ class Wallet extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function transactions()
+    public function wallet()
     {
-        return $this->hasMany(Transaction::class);
+        return $this->belongsTo(Wallet::class);
     }
 }

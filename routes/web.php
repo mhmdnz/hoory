@@ -30,6 +30,12 @@ Route::middleware(['verified', 'check.wallet', 'auth'])->group(function () {
 
     Route::post('/wallet/new', [\App\Http\Controllers\WalletController::class, 'create'])
         ->name('wallet.add.create');
+
+    Route::get('/wallet/balance/{wallet}', [\App\Http\Controllers\WalletController::class, 'balance'])
+        ->name('wallet.balance');
+
+    Route::post('/transaction/{wallet}', [\App\Http\Controllers\TransactionController::class, 'create'])
+        ->name('transaction.new');
 });
 
 require __DIR__.'/auth.php';

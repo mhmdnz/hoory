@@ -164,6 +164,9 @@ return [
         \App\Providers\EloquentUserRepositoryProvider::class,
         \App\Providers\OAuth2ExternalServiceProvider::class,
         \App\Providers\EloquentWalletRepositoryProvider::class,
+        \App\Providers\TransactionHandlerServiceProvider::class,
+        \App\Providers\WalletHandlerServiceProvider::class,
+        \App\Providers\EloquentTransactionRepositoryProvider::class,
 
         /*
          * Package Service Providers...

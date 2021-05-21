@@ -2,9 +2,11 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\BalanceRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
 
-class WalletRequest extends FormRequest
+class TransactionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +26,7 @@ class WalletRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|min:4',
-            'number' => 'required|digits_between:6,16|unique:App\Models\Wallet,number',
-            'type' => 'in:debit,credit'
+            'amount' => ['required','numeric', new BalanceRule($this->route('wallet'))]
         ];
     }
 }
